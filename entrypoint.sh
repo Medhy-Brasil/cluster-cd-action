@@ -32,12 +32,6 @@ resolve_app_name() {
 
 resolve_environment() {
   export ENVIRONMENT="${INPUT_ENVIRONMENT}"
-
-  if [[ "${ENVIRONMENT}" == "production" ]]; then
-    echo "::error :This action is disabled for production deployments."
-    exit 1
-  fi
-
   echo "Environment: $INPUT_ENVIRONMENT"
 }
 
